@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.9.19
 MAINTAINER bogclay <bogclay@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -16,10 +16,9 @@ RUN apt-get update -qq
 
 # install wget
 RUN apt-get update
-#RUN apt-get -y install wget
 
 # install insync-headless
-RUN add-apt-repository "deb http://apt.insynchq.com/ubuntu trusty non-free contrib"
+RUN add-apt-repository "deb http://apt.insynchq.com/ubuntu precise non-free contrib"
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35
 RUN apt-get update
 RUN apt-get -y install insync-headless
