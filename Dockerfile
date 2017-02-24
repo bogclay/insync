@@ -14,12 +14,9 @@ RUN usermod -g 100 nobody
 
 RUN apt-get update -qq
 
-# install wget
-RUN apt-get update
-
 # install insync-headless
-RUN add-apt-repository "deb http://apt.insynchq.com/ubuntu precise non-free contrib"
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35
+RUN add-apt-repository "deb http://apt.insynchq.com/ubuntu precise non-free contrib"
 RUN apt-get update
 RUN apt-get -y install insync-headless
 RUN apt-get clean
