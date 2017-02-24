@@ -16,7 +16,7 @@ RUN apt-get update -qq
 
 # install wget
 RUN apt-get update
-RUN apt-get -y install wget
+#RUN apt-get -y install wget
 
 # install insync-headless
 RUN add-apt-repository "deb http://apt.insynchq.com/ubuntu trusty non-free contrib"
